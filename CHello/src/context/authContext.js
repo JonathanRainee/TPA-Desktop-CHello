@@ -6,7 +6,6 @@ import {createUserWithEmailAndPassword,
 import {auth,} from '../firebase'
 import { collection, query, where } from "firebase/firestore";
 
-
 const UseContext = createContext()
 let userID = ''
 
@@ -28,7 +27,7 @@ export const AuthContextProvider = ({children}) => {
 
     useEffect(() => {
         const unsubscrice = onAuthStateChanged(auth, (currUser) => {
-            console.log(currUser)
+            // console.log(currUser)
             setUser(currUser)
         })
         return () => {

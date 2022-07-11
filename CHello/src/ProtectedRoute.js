@@ -9,8 +9,7 @@ const {user} = UserAuth()
 if(!user){
     return <Navigate to='/'/>
 }
-
-  return children
+    return children
 }
 
 export default ProtectedRoute
